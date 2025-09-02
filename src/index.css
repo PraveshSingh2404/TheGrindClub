@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Import Black Ops One font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+.hero-title {
+  font-family: 'Black Ops One', cursive;
+  /* Classic text shadow with multiple layers for depth */
+  text-shadow: 
+    3px 3px 0px #000000,
+    6px 6px 0px rgba(0, 0, 0, 0.7),
+    9px 9px 0px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  /* Add some glow effect */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.hero-subtitle {
+  /* Subtle shadow for subtext */
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Add some animation to the title */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Ensure video is properly positioned */
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
