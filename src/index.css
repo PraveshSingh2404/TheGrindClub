@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 /* Import Black Ops One font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-
 .hero-title {
   font-family: 'Black Ops One', cursive;
   /* Classic text shadow with multiple layers for depth */

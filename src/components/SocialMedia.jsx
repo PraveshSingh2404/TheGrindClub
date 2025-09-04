@@ -32,10 +32,7 @@ const FollowTheFlow = () => {
       <div className="max-w-6xl mx-auto text-center relative z-10">
         
         {/* Section Badge */}
-        <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 text-sm font-semibold mb-8">
-          <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></span>
-          Our Method
-        </div>
+       
 
         {/* Heading */}
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider leading-none mb-6 text-white">
