@@ -10,6 +10,7 @@ const Login = ({ onSwitchToForgotPassword, onClose, onLoginSuccess }) => {
   const [error, setError] = useState("");
 
   // 📌 Dashboard Mapping
+  // Ensure these values match the paths in App.js exactly (without the slash)
   const USERS = {
     "9936334474": "admin-dashboard",
     "8081403380": "trainer-dashboard",
@@ -19,27 +20,26 @@ const Login = ({ onSwitchToForgotPassword, onClose, onLoginSuccess }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const { mobile, password } = formData;
 
-    // 🔐 Check mobile exists & password matches
     if (USERS[mobile] && password === mobile) {
       console.log("Login Success:", USERS[mobile]);
 
-      // pass role/dashboard to parent (recommended)
-      onLoginSuccess?.(USERS[mobile]);
+      // FIX: Use optional chaining (?.)
+      // This prevents the "not a function" crash if the prop is missing
+      if (onLoginSuccess) {
+        onLoginSuccess(USERS[mobile]); 
+      } else {
+        console.error("CRITICAL ERROR: onLoginSuccess prop is missing in Login.js!");
+      }
 
-      onClose();
     } else {
       setError("Invalid mobile number or password");
     }
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
     setError("");
   };
 
@@ -56,11 +56,8 @@ const Login = ({ onSwitchToForgotPassword, onClose, onLoginSuccess }) => {
 
       {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Mobile */}
         <div>
-          <label className="block text-sm font-semibold text-gray-300 mb-2">
-            Mobile Number
-          </label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Mobile Number</label>
           <div className="relative">
             <Smartphone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
@@ -76,11 +73,8 @@ const Login = ({ onSwitchToForgotPassword, onClose, onLoginSuccess }) => {
           </div>
         </div>
 
-        {/* Password */}
         <div>
-          <label className="block text-sm font-semibold text-gray-300 mb-2">
-            Password
-          </label>
+          <label className="block text-sm font-semibold text-gray-300 mb-2">Password</label>
           <div className="relative">
             <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
@@ -102,11 +96,8 @@ const Login = ({ onSwitchToForgotPassword, onClose, onLoginSuccess }) => {
           </div>
         </div>
 
-        {error && (
-          <p className="text-red-400 text-sm text-center">{error}</p>
-        )}
+        {error && <p className="text-red-400 text-sm text-center">{error}</p>}
 
-        {/* Forgot Password */}
         <div className="text-right">
           <button
             type="button"
@@ -117,7 +108,6 @@ const Login = ({ onSwitchToForgotPassword, onClose, onLoginSuccess }) => {
           </button>
         </div>
 
-        {/* Submit */}
         <button
           type="submit"
           className="w-full bg-white text-black py-3 rounded-2xl font-bold text-lg hover:scale-105 transition-all"

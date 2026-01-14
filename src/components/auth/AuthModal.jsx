@@ -4,6 +4,7 @@ import Login from "./Login";
 import OTP from "./OTP";
 import ForgotPassword from "./ForgotPassword";
 
+// 1. 👇 MAKE SURE 'onLoginSuccess' IS IN THESE BRACKETS
 const AuthModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const [currentView, setCurrentView] = useState("login");
   const [userEmail, setUserEmail] = useState("");
@@ -34,6 +35,7 @@ const AuthModal = ({ isOpen, onClose, onLoginSuccess }) => {
           <Login
             onSwitchToForgotPassword={() => setCurrentView("forgot")}
             onClose={onClose}
+            // 2. 👇 CRITICAL: YOU MUST PASS IT DOWN TO LOGIN HERE
             onLoginSuccess={onLoginSuccess}
           />
         )}
