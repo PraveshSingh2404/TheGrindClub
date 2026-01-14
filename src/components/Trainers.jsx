@@ -4,19 +4,19 @@ import { Users, Award } from "lucide-react";
 const Trainers = () => {
   const trainers = [
     {
-      name: "Yash",
-      specialty: "Strength & Cardio Specialist",
+      name: "SURYA",
+      specialty: "Strength & Yoga Specialist",
       description: "Specializes in muscle building, strength training, and high-intensity cardio workouts. Yash helps members achieve their peak physical condition with customized training plans.",
-      tags: ["Strength", "Cardio", "HIIT"]
+      tags: ["Strength", "Yoga", "HIIT"]
     },
     {
-      name: "Abhishek", 
-      specialty: "Muscle Training & Dance",
+      name: "UBAID", 
+      specialty: "Muscle Training & Fitness Coach",
       description: "With expertise in both muscle training and dance fitness, Abhishek brings creativity and energy to help members build fitness while having fun.",
-      tags: ["Muscle", "Dance", "Cardio"]
+      tags: ["Muscle", "Fitness", "Cardio"]
     },
     {
-      name: "Vikash",
+      name: "PUSPENDRA",
       specialty: "Zumba & Dance Instructor", 
       description: "Vikash brings the joy of movement to our gym with energetic Zumba and dance classes. His passion transforms boring choreography into effective cardio workouts.",
       tags: ["Zumba", "Dance", "Aerobics"]
@@ -58,7 +58,7 @@ const Trainers = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40"></div>
             <div className="absolute bottom-8 left-8 text-white">
               <h3 className="text-2xl font-bold mb-2">Our Training Team</h3>
-              <p className="text-gray-300">Led by our head trainer Beeru Pal, our team of certified professionals is dedicated to helping you achieve your fitness goals.</p>
+              <p className="text-gray-300">Our team of certified professionals is dedicated to helping you achieve your fitness goals.</p>
             </div>
           </div>
         </div>

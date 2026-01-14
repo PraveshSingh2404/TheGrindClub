@@ -10,13 +10,15 @@ import Contact from "../components/Contact";
 import Testimonials from "../components/Testimonials";
 import MembershipPlans from "../components/MembershipPlans";
 import Services from "../components/Services";
+import VisitorPopup from "../components/VisitorPopup";
 
 function Home() {
   return (
     <div>
+      <VisitorPopup />
       <Hero />
       <Show />
-      <HeadTrainer />
+      {/* <HeadTrainer /> */}
       <Trainers />
       <Team />
       <Services />

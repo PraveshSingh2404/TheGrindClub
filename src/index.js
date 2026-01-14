@@ -12,3 +12,19 @@ export { default as Contact } from './components/Contact'
 export { default as Testimonials } from './components/Testimonials'
 export { default as MembershipPlans } from './components/MembershipPlans'
 export { default as Services } from './components/Services'
+export { default as Header } from './components/Header'
+export { default as Footer } from './components/Footer'
+export { default as AuthModal } from './components/auth/AuthModal'
+export { default as VisitorPopup } from './components/VisitorPopup'
+
+// auth
+export { default as Login } from './components/auth/Login'
+export { default as Signup } from './components/auth/Signup'
+export { default as OTP } from './components/auth/OTP'
+export { default as ForgotPassword } from './components/auth/ForgotPassword'    
+
+
+//dashboard
+export { default as AdminDashboard } from './pages/dashboards/AdminDashboard'
+export { default as UserDashboard } from './pages/dashboards/UserDashboard'
+export { default as TrainerDashboard } from './pages/dashboards/TrainerDashboard'

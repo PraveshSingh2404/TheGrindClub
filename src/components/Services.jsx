@@ -2,6 +2,21 @@ import React from "react";
 import { Music, Heart, Activity, Shield, Dumbbell, Zap } from "lucide-react";
 
 const Services = () => {
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+
+    const headerHeight = 80; // same as Hero
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition =
+      elementPosition + window.pageYOffset - headerHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
   const services = [
     {
       title: "Zumba",
@@ -91,9 +106,12 @@ const Services = () => {
             <p className="text-gray-400 mb-6">
               Join The Grind Club today and discover the perfect workout program for your fitness goals.
             </p>
-            <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transform hover:scale-105 transition-all duration-300">
-              View All Programs
-            </button>
+            <button
+  onClick={() => scrollToSection("membership")}
+  className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transform hover:scale-105 transition-all duration-300"
+>
+  View All Programs
+</button>
           </div>
         </div>
         

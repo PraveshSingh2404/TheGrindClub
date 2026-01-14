@@ -146,7 +146,7 @@ const Contact = () => {
               {/* Email Input */}
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-2">
-                  Email Address *
+                  Email Address 
                 </label>
                 <input
                   type="email"
@@ -162,7 +162,7 @@ const Contact = () => {
               {/* Phone Input */}
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-2">
-                  Phone Number
+                  Phone Number *
                 </label>
                 <input
                   type="tel"

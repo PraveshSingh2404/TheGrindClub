@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
+import AuthModal from "./auth/AuthModal";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
 
   // Change background on scroll
   useEffect(() => {
@@ -23,7 +25,7 @@ const Header = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 80; // Account for fixed header
+      const headerHeight = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
@@ -77,7 +79,7 @@ const Header = () => {
             className="flex items-center space-x-3 group cursor-pointer transform hover:scale-105 transition-all duration-300" 
             onClick={() => scrollToSection('hero')}
           >
-            <div className="w-16 h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full  group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300 group-hover:rotate-12 overflow-hidden">
+            <div className="w-16 h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300 group-hover:rotate-12 overflow-hidden">
               <img 
                 src={logo} 
                 alt="The Grind Club Logo" 
@@ -118,7 +120,7 @@ const Header = () => {
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => setAuthModalOpen(true)}
               className="px-6 py-3 border border-white/30 rounded-full text-sm font-semibold text-white hover:bg-white/10 hover:border-white/50 hover:scale-105 transform transition-all duration-300 backdrop-blur-sm"
             >
               JOIN NOW
@@ -178,7 +180,10 @@ const Header = () => {
               {/* Mobile CTA Buttons */}
               <div className="flex flex-col space-y-4 pt-6">
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => {
+                    setAuthModalOpen(true);
+                    setMenuOpen(false);
+                  }}
                   className="px-8 py-3 border border-white/30 rounded-full text-sm font-semibold text-white hover:bg-white/10 hover:border-white/50 hover:scale-105 transform transition-all duration-300 backdrop-blur-sm"
                 >
                   JOIN NOW
@@ -194,6 +199,12 @@ const Header = () => {
           </div>
         </div>
       </header>
+
+      {/* Auth Modal */}
+      <AuthModal 
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+      />
 
       {/* Spacer for fixed header */}
       <div className="h-20"></div>

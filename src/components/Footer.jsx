@@ -29,12 +29,12 @@ const Footer = () => {
                 Stay Updated
               </h4>
               <p className="text-xs text-gray-400 mb-4">
-                Get fitness tips, class updates, and exclusive offers.
+                Get fitness tips, class updates, and exclusive offers on your whatsapp.
               </p>
               <div className="flex">
                 <input
-                  type="email"
-                  placeholder="your@email.com"
+                  type="text"
+                  placeholder="Enter your whatsapp number"
                   className="flex-1 bg-black/40 border border-white/20 rounded-l-full px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-white/40"
                 />
                 <button className="bg-white text-black px-4 py-2 rounded-r-full text-sm font-semibold hover:bg-gray-200 transition-colors duration-300">

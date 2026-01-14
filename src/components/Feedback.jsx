@@ -110,23 +110,7 @@ const Offerings = () => {
           ))}
         </div>
 
-        {/* Bottom CTA Section */}
-        <div className="mt-20 bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Ready to Join The Grind Club?
-          </h3>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Experience state-of-the-art equipment, expert training, and a community that pushes you to be your best.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transform hover:scale-105 transition-all duration-300">
-              Start Your Trial
-            </button>
-            <button className="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
-              Tour Our Facility
-            </button>
-          </div>
-        </div>
+      
         
       </div>
     </section>

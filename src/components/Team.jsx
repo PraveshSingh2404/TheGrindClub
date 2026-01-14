@@ -83,23 +83,7 @@ const Team = () => {
               We believe in customized fitness plans that adapt to your unique needs, goals, and progress for optimal results.
             </p>
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Join Our Team?
-            </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Experience the difference that a dedicated, professional team can make in your fitness journey.
-            </p>
-            <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transform hover:scale-105 transition-all duration-300">
-              Meet Our Trainers
-            </button>
-          </div>
-        </div>
-        
+        </div>        
       </div>
     </section>
   );
