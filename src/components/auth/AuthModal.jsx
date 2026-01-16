@@ -36,7 +36,7 @@ const AuthModal = ({ isOpen, onClose, onLoginSuccess }) => {
             onSwitchToForgotPassword={() => setCurrentView("forgot")}
             onClose={onClose}
             // 2. 👇 CRITICAL: YOU MUST PASS IT DOWN TO LOGIN HERE
-            onLoginSuccess={onLoginSuccess}
+            // onLoginSuccess={onLoginSuccess}/
           />
         )}
 

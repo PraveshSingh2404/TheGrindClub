@@ -29,7 +29,7 @@ function App() {
       <AuthModal
         isOpen={openAuth}
         onClose={() => setOpenAuth(false)}
-        onLoginSuccess={handleLoginSuccess}
+        // onLoginSuccess={handleLoginSuccess}
       />
 
       <Routes>
